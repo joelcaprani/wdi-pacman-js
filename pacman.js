@@ -2,6 +2,8 @@
 var score = 0;
 var lives = 2;
 
+var powerPellets = 4;
+
 
 // Define your ghosts here
 var inky = {
@@ -62,6 +64,10 @@ function displayMenu() {
   console.log('\n\nSelect Option:\n');  // each \n creates a new line
   console.log('(d) Eat Dot');
   console.log('(q) Quit');
+  console.log('(1) Eat Inky');
+  console.log('(2) Eat Blinky');
+  console.log('(3) Eat Pinky');
+  console.log('(4) Eat Clyde');
 }
 
 function displayPrompt() {
@@ -76,6 +82,11 @@ function eatDot() {
   score += 10;
 }
 
+function eatGhost() {
+  while (false);
+  // console.log('EATEN BY GHOST');
+  lives --;
+}
 
 // Process Player's Input
 function processInput(key) {
@@ -87,12 +98,32 @@ function processInput(key) {
     case 'd':
       eatDot();
       break;
+      case '1':
+      eatGhost(inky);
+      console.log('EATEN BY INKY');
+      break;
+      case '2':
+      eatGhost(blinky);
+      console.log('EATEN BY BLINKY');
+      break;
+      case '3':
+      eatGhost(pinky);
+      console.log('EATEN BY PINKY');
+      break;
+      case '4':
+      eatGhost(clyde);
+      console.log('EATEN BY CLYDE');
+      break;
     default:
       console.log('\nInvalid Command!');
   }
 }
-
-
+function gameOver() {
+  if (lives < 0); {
+  process.exit();
+  console.log('YOU DIED!!!!');
+  }
+}
 //
 // YOU PROBABLY DON'T WANT TO CHANGE CODE BELOW THIS LINE
 //
