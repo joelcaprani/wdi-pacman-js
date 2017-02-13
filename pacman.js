@@ -36,7 +36,8 @@ var clyde = {
   edible: false
 };
 
-// replace this comment with your four ghosts setup as objects
+var ghosts = ['Inky', 'Blinky', 'Pinky', 'Clyde'];
+
 
 
 // Draw the screen functionality
