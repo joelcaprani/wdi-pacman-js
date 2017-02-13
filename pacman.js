@@ -121,7 +121,8 @@ function processInput(key) {
       case 'p':
       if (powerPellets > 0) {
         eatPowerPellet();
-      break; }
+      break;
+    }
        else {
       console.log('\nNo powerPellets left!!');
       break
